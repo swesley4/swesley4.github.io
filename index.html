@@ -11,14 +11,16 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Tudor History Narrative.</tw-noscript></noscript></tw-story>
 <tw-storydata name="Tudor History Narrative" startnode="1" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="4512A260-636F-42E4-8013-A4A28DAB0538" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
     font-family: Cooper Black;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction to the Tutor History Narrative" tags="" position="675,75" size="100,100">(set: $battleOutcome to &quot;victory&quot;)
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction to the Tutor History Narrative" tags="" position="275,225" size="100,100">(set: $battleOutcome to &quot;victory&quot;)
 (set: $marriageSuccess to true)
 (set: $supportReformation to true)
 (set: $supportMonasteries to false)
 (set: $armadaDefeated to true)
 (enchant:?page,(text-colour:black)+(bg:red)+(text-size:1.5))[//&#39;&#39;[The Tudor monarchy spanned from 1485 to 1603 and played an incredible role in the formation of England’s political, religious, and social structures. It was a time of defining epochs, including but not limited to the formation of the Church of England and the sinking of the Spanish Armada. This paper focuses on the main themes of the Tudor dynasty from Henry VII to Elizabeth I (Smith, 2004).
 
-[[The Successor, Henry VII-&gt;The Rise of Henry VII]] | [[Henry VIII and Reformation-&gt;The Reformation under Henry VIII]]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="2" name="The Rise of Henry VII" tags="" position="700,225" size="100,100">(if: $battleOutcome is &quot;victory&quot;)[[[Continue to Henry VII’s Policies-&gt;Victorious Path]]]
+[[The Successor, Henry VII-&gt;The Rise of Henry VII]] | [[Henry VIII and Reformation-&gt;The Reformation under Henry VIII]]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="2" name="The Rise of Henry VII" tags="" position="200,350" size="100,100">(if: $battleOutcome is &quot;victory&quot;)[[[Continue to Henry VII&#39;s Policies -&gt; Victorious Path]]]
+(else:)[[[Continue to Henry VII&#39;s Policies -&gt; Defeated Path]]]
+(if: $battleOutcome is &quot;victory&quot;)[[[Continue to Henry VII’s Policies-&gt;Victorious Path]]]
 (else:)[[[Continue to Henry VII’s Policies-&gt;Defeated Path]]]
 
 (if: $battleOutcome is &quot;victory&quot;)[The battle of Bosworth Field in 1485 saw Henry VII win a decisive battle against the rebel Lancastrians, which signified the conclusion of the Wars of the Roses and the start of the reign of the Tudors.]
@@ -27,7 +29,9 @@
 
 [[Policies of Henry-&gt;Henry VII&#39;s Policies]]
 [[Stability: Marriage Henry and Elizabeth of York-&gt;Marriage to Elizabeth of York]]
-[[Bibliography-&gt;Bibliography]]//&#39;&#39;]</tw-passagedata><tw-passagedata pid="3" name="The Reformation under Henry VIII" tags="" position="925,275" size="100,100">(if: $supportReformation is true)[[[Continue-&gt;Support for Reformation]]]
+[[Bibliography-&gt;Bibliography]]//&#39;&#39;]</tw-passagedata><tw-passagedata pid="3" name="The Reformation under Henry VIII" tags="" position="325,350" size="100,100">(if: $supportReformation is true)[[[Continue -&gt; Support for Reformation]]]
+(else:)[[[Continue -&gt; Opposition to Reformation]]]
+(if: $supportReformation is true)[[[Continue-&gt;Support for Reformation]]]
 (else:)[[[Continue-&gt;Opposition to Reformation]]]
 (if: $supportReformation is true)[Henry VIII successfully separated from the Catholic Church, cementing the power of the Church of England.]
 (else:)[Opposition from the Catholic Church prevented Henry VIII from fully establishing the Church of England, causing a lengthy schism.]
@@ -36,55 +40,59 @@
 [[Dissolution of the Monasteries-&gt;Dissolution of the Monasteries]]
 [[Marriage to Anne Boleyn-&gt;Marriage to Anne Boleyn]]
 [[Bibliography-&gt;Bibliography]]
-&#39;&#39;//]</tw-passagedata><tw-passagedata pid="4" name="Henry VII&#39;s Policies" tags="" position="475,200" size="100,100">(enchant:?page,(text-colour:black)+(bg:yellow)+(text-size:1.5))[//&#39;&#39;To establish his absolute rule, necessary changes were initiated by Henry VII, which aimed to concentrate all power in the monarchy. His monetary measures, for instance, the use of bonds and recognitions, augmented the cash flow to the king’s treasury (Jones, 2012). Further, he entered into diplomatic marriages with his children, which created alliances (Penn, 2012).
+&#39;&#39;//]</tw-passagedata><tw-passagedata pid="4" name="Henry VII&#39;s Policies" tags="" position="150,475" size="100,100">(enchant:?page,(text-colour:black)+(bg:yellow)+(text-size:1.5))[//&#39;&#39;To establish his absolute rule, necessary changes were initiated by Henry VII, which aimed to concentrate all power in the monarchy. His monetary measures, for instance, the use of bonds and recognitions, augmented the cash flow to the king’s treasury (Jones, 2012). Further, he entered into diplomatic marriages with his children, which created alliances (Penn, 2012).
 
 [[Henry VIII’s Succession-&gt;The Reformation under Henry VIII]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="5" name="Marriage to Elizabeth of York" tags="" position="500,375" size="100,100">(if: $marriageSuccess is true)[[[Continue to Henry VIII’s Succession-&gt;Successful Marriage]]]
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="5" name="Marriage to Elizabeth of York" tags="" position="275,475" size="100,100">(if: $marriageSuccess is true)[[[Continue to Henry VIII’s Succession -&gt; Successful Marriage]]]
+(else:)[[[Continue to Henry VIII’s Succession -&gt; Unsuccessful Marriage]]]
+(if: $marriageSuccess is true)[[[Continue to Henry VIII’s Succession-&gt;Successful Marriage]]]
 (else:)[[[Continue to Henry VIII’s Succession-&gt;Unsuccessful Marriage]]]
 (if: $marriageSuccess is true)[Henry VII married Elizabeth of York in 1486, and their union was celebrated as a symbol of peace and unity for England.]
 (else:)[The marriage between Henry VII and Elizabeth of York was fraught with difficulties, leading to internal unrest.]
 (enchant:?page,(text-colour:black)+(bg:cyan)+(text-size:1.5))[//&#39;&#39;Henry VII married Elizabeth of York in 1486, and their marriage was the end of the House of Lancaster and York and thus marked the end of civil war in England, the War of Roses (Jones, 2012).
 
 [[Henry VIII’s Early Reign-&gt;The Reformation under Henry VIII]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="6" name="Dissolution of the Monasteries" tags="" position="625,400" size="100,100">(if: $supportMonasteries is true)[[[Continue-&gt;Monasteries Support Henry]]]
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="6" name="Dissolution of the Monasteries" tags="" position="400,475" size="100,100">(if: $supportMonasteries is true)[[[Continue-&gt;Monasteries Support Henry]]]
 (else:)[[[Continue-&gt;Monasteries Resist Henry]]]
 (if: $supportMonasteries is true)[Monasticism in England remained strong, as many monasteries resisted dissolution.]
 (else:)[Henry VIII dissolved the monasteries, transferring their wealth to the crown and nobles.]
 (enchant:?page,(text-colour:black)+(bg:grey)+(text-size:1.5))[//&#39;&#39;One of the tangible consequences of the English Reformation was the process of monasticism between 1536 and 1541. Henry VIII took it from them and gave it to the Crown and the nobles, which stirred a new configuration of the socio-political structure in England (Elton, 2015).
 
 [[The Church of England-&gt;Marriage to Anne Boleyn]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="7" name="Marriage to Anne Boleyn" tags="" position="850,450" size="100,100">(enchant:?page,(text-colour:white)+(bg:navy)+(text-size:1.5))[//&#39;&#39;Anne Boleyn was instrumental to the cause that led to England’s split from the Catholic Church. The very marriage to King Henry VIII in 1533 following the annulment of his marriage from Catherine of Aragon was the spark that lit the Reformation fire (Guy, 2024).
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="7" name="Marriage to Anne Boleyn" tags="" position="525,475" size="100,100">(enchant:?page,(text-colour:white)+(bg:navy)+(text-size:1.5))[//&#39;&#39;Anne Boleyn was instrumental to the cause that led to England’s split from the Catholic Church. The very marriage to King Henry VIII in 1533 following the annulment of his marriage from Catherine of Aragon was the spark that lit the Reformation fire (Guy, 2024).
 
 [[Elizabeth I’s Birth-&gt;The Birth of Elizabeth I]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]]</tw-passagedata><tw-passagedata pid="8" name="The Birth of Elizabeth I" tags="" position="875,550" size="100,100">(enchant:?page,(text-colour:black)+(bg:purple)+(text-size:1.5))[&#39;&#39;//Elizabeth I was born on September 7, 1533, but it was a difficult childhood, as her mother was beheaded and Henry VIII remarried several times (Doran, 2002). However, Elizabeth transformed herself into one of the most powerful kings of England.
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]]</tw-passagedata><tw-passagedata pid="8" name="The Birth of Elizabeth I" tags="" position="525,600" size="100,100">(enchant:?page,(text-colour:black)+(bg:purple)+(text-size:1.5))[&#39;&#39;//Elizabeth I was born on September 7, 1533, but it was a difficult childhood, as her mother was beheaded and Henry VIII remarried several times (Doran, 2002). However, Elizabeth transformed herself into one of the most powerful kings of England.
 
 [[Elizabeth’s Rise to Power-&gt;Elizabeth I&#39;s Early Reign]]
-[[Bibliography-&gt;Bibliography]]//&#39;&#39;]</tw-passagedata><tw-passagedata pid="9" name="Elizabeth I&#39;s Early Reign" tags="" position="675,650" size="100,100">(enchant:?page,(text-colour:black)+(bg:white)+(text-size:1.5))[//&#39;&#39;Elizabeth I came to power in 1558, succeeding her half-sister Mary I to the throne of England. Her early years of rule were largely bent on reconciliation, which had been ruptured by religious strife and political instability (Doran, 2002). Many strategies adopted by Elizabeth contribute to balancing England; the first one is diplomacy.
+[[Bibliography-&gt;Bibliography]]//&#39;&#39;]</tw-passagedata><tw-passagedata pid="9" name="Elizabeth I&#39;s Early Reign" tags="" position="525,725" size="100,100">(enchant:?page,(text-colour:black)+(bg:white)+(text-size:1.5))[//&#39;&#39;Elizabeth I came to power in 1558, succeeding her half-sister Mary I to the throne of England. Her early years of rule were largely bent on reconciliation, which had been ruptured by religious strife and political instability (Doran, 2002). Many strategies adopted by Elizabeth contribute to balancing England; the first one is diplomacy.
 
 [[The Elizabethan Religious Settlement-&gt;The Elizabethan Religious Settlement]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="10" name="The Elizabethan Religious Settlement" tags="" position="875,750" size="100,100">(enchant:?page,(text-colour:white)+(bg:black)+(text-size:1.5))//&#39;&#39;Elizabeth I promoted the new religious settlement in 1559 with major details in a bid to avoid extremes of either Catholicism or Protestantism. This act reaffirmed her authority as the Supreme Governor of the Church of England and again made the Church of England supreme.
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="10" name="The Elizabethan Religious Settlement" tags="" position="500,850" size="100,100">(enchant:?page,(text-colour:white)+(bg:black)+(text-size:1.5))//&#39;&#39;Elizabeth I promoted the new religious settlement in 1559 with major details in a bid to avoid extremes of either Catholicism or Protestantism. This act reaffirmed her authority as the Supreme Governor of the Church of England and again made the Church of England supreme.
 
 [[The Spanish Armada-&gt;The Defeat of the Spanish Armada]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//</tw-passagedata><tw-passagedata pid="11" name="The Defeat of the Spanish Armada" tags="" position="675,800" size="100,100">(if: $armadaDefeated is true)[[[Continue-&gt;Armada Defeated]]]
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//</tw-passagedata><tw-passagedata pid="11" name="The Defeat of the Spanish Armada" tags="" position="500,975" size="100,100">(if: $armadaDefeated is true)[[[Continue -&gt; Armada Defeated]]]
+(else:)[[[Continue -&gt; Armada Wins]]]
+(if: $armadaDefeated is true)[[[Continue-&gt;Armada Defeated]]]
 (else:)[[[Continue-&gt;Armada Wins]]]
 (if: $armadaDefeated is true)[The Spanish Armada was decisively defeated in 1588, securing England’s status as a rising naval power.]
 (else:)[The Spanish Armada posed a serious threat to England, leading to temporary retreats from English forces.]
 (enchant:?page,(text-colour:black)+(bg:orange)+(text-size:1.5))[//&#39;&#39;Basically, in the year 1588, England, under the rule of Elizabeth, was threatened with invasion from the Spanish Armada, a formidable naval force dispatched by the King of Spain, King Philip II. A turning point of naval power in England was the victory during the Battle of Sol, markedly making England a rising sea power (Rodger, 2004). 
 
 [[Elizabethan Golden Age-&gt;The Elizabethan Golden Age]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]]]</tw-passagedata><tw-passagedata pid="12" name="The Elizabethan Golden Age" tags="" position="625,1000" size="100,100">(enchant:?page,(text-colour:black)+(bg:green)+(text-size:1.5))[//&#39;&#39;The reign of Elizabeth I is usually referred to as the time of England’s &quot;renaissance.&quot; At this time there were also great developments in art; people like William Shakespeare contributed to a rich and long-standing culture (Strong, 1986). 
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]]]</tw-passagedata><tw-passagedata pid="12" name="The Elizabethan Golden Age" tags="" position="500,1100" size="100,100">(enchant:?page,(text-colour:black)+(bg:green)+(text-size:1.5))[//&#39;&#39;The reign of Elizabeth I is usually referred to as the time of England’s &quot;renaissance.&quot; At this time there were also great developments in art; people like William Shakespeare contributed to a rich and long-standing culture (Strong, 1986). 
 
 [[Exploration and Colonization-&gt;Exploration and Colonization]]
 [[Bibliography-&gt;Bibliography]]
-&#39;&#39;//]</tw-passagedata><tw-passagedata pid="13" name="Exploration and Colonization" tags="" position="675,1150" size="100,100">(enchant:?page,(text-colour:cyan)+(bg:black)+(text-size:1.5))[//&#39;&#39;Elizabeth was the first to initiate the Age of Discovery and overseas colonization campaign of England, employing such explorers as Sir Francis Drake as well as Sir Walter Raleigh. 
+&#39;&#39;//]</tw-passagedata><tw-passagedata pid="13" name="Exploration and Colonization" tags="" position="500,1225" size="100,100">(enchant:?page,(text-colour:cyan)+(bg:black)+(text-size:1.5))[//&#39;&#39;Elizabeth was the first to initiate the Age of Discovery and overseas colonization campaign of England, employing such explorers as Sir Francis Drake as well as Sir Walter Raleigh. 
 
 [[The End of the Tudor Dynasty-&gt;The End of the Tudor Dynasty]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="14" name="The End of the Tudor Dynasty" tags="" position="525,1250" size="100,100">(enchant:?page,(text-colour:navy)+(bg:white)+(text-size:1.5))[//&#39;&#39;The death of Elizabeth I in 1603 was most opportune to put an end to the Tudor line of succession because the queen died childless. Which then went to the Stuart line, and James VI of Scotland became James I of England, thereby joining the crowns of both England and Scotland in one (Ashley, 2006). 
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="14" name="The End of the Tudor Dynasty" tags="" position="500,1350" size="100,100">(enchant:?page,(text-colour:navy)+(bg:white)+(text-size:1.5))[//&#39;&#39;The death of Elizabeth I in 1603 was most opportune to put an end to the Tudor line of succession because the queen died childless. Which then went to the Stuart line, and James VI of Scotland became James I of England, thereby joining the crowns of both England and Scotland in one (Ashley, 2006). 
 
 [[Conclusion-&gt;Conclusion]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="15" name="Conclusion" tags="" position="625,1350" size="100,100">(enchant:?page,(text-colour:black)+(bg:yellow)+(text-size:1.5))[//&#39;&#39;The Tudor dynasty played a crucial role in the modern history of England, ranging from the Brexitan reform to the woman&#39;s equilization and the rising of a cultural renaissance. The magnitude of their contribution may be measured by the fact that they defined the parameters of the future of the English state and monarchy (Elton, 2015).
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="15" name="Conclusion" tags="" position="500,1475" size="100,100">(enchant:?page,(text-colour:black)+(bg:yellow)+(text-size:1.5))[//&#39;&#39;The Tudor dynasty played a crucial role in the modern history of England, ranging from the Brexitan reform to the woman&#39;s equilization and the rising of a cultural renaissance. The magnitude of their contribution may be measured by the fact that they defined the parameters of the future of the English state and monarchy (Elton, 2015).
 
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="16" name="Bibliography" tags="" position="925,1050" size="100,100">(enchant:?page,(text-colour:black)+(bg:grey)+(text-size:1.5))Routledge.https://www.taylorfrancis.com/books/mono/10.4324/9780203130063/elizabeth-religion-1558-1603-susan-dora
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="16" name="Bibliography" tags="" position="625,1475" size="100,100">(enchant:?page,(text-colour:black)+(bg:grey)+(text-size:1.5))Routledge.https://www.taylorfrancis.com/books/mono/10.4324/9780203130063/elizabeth-religion-1558-1603-susan-dora
 
 Elton, G. R. (2015). England under the Tudors. Routledge.https://www.taylorfrancis.com/books/mono/10.4324/9780203825426/england-tudors-elton
 
@@ -104,40 +112,40 @@ Rodger, N. A. (2004). The safeguard of the sea: a naval history of Britain 660-1
 Ashley, L. R. (2006). Recent publications on Elizabethan England and related fields. Bibliothèque d&#39;Humanisme et Renaissance, 68(3), 573-610.https://www.jstor.org/stable/20681029
 
 Strong, R. C. (1986). The cult of Elizabeth: Elizabethan portraiture and pageantry. Univ of California Press.https://books.google.com/books?hl=en&amp;lr=&amp;id=gYEwaJfjMIEC&amp;oi=fnd&amp;pg=PA11&amp;dq=Strong,+R.+(1998).+The+Cult+of+Elizabeth:+Elizabethan+Portraiture+and+Pageantry.+Thames+%26+Hudson.&amp;ots=IWUs-w6Hhs&amp;sig=oiBTL8v8zj0Q_qPNlV3Iq3D-u6M
-]</tw-passagedata><tw-passagedata pid="17" name="Victorious Path" tags="" position="350,250" size="100,100">(set: $battleOutcome to &quot;victory&quot;)
+]</tw-passagedata><tw-passagedata pid="17" name="Victorious Path" tags="" position="150,600" size="100,100">(set: $battleOutcome to &quot;victory&quot;)
 Henry VII emerged victorious at the Battle of Bosworth Field. His reign marked the beginning of a new dynasty and the end of the Wars of the Roses.
 [[Continue-&gt;Policies of Henry]]
-</tw-passagedata><tw-passagedata pid="18" name="Defeated Path" tags="" position="400,475" size="100,100">(set: $battleOutcome to &quot;defeat&quot;)
+</tw-passagedata><tw-passagedata pid="18" name="Defeated Path" tags="" position="275,600" size="100,100">(set: $battleOutcome to &quot;defeat&quot;)
 Henry VII&#39;s forces faltered at Bosworth Field, and the Lancastrians took temporary control of England. However, Henry VII eventually regrouped and reclaimed the throne.
 [[Continue-&gt;Policies of Henry]]
-</tw-passagedata><tw-passagedata pid="19" name="Successful Marriage" tags="" position="250,575" size="100,100">(set: $marriageSuccess to true)
+</tw-passagedata><tw-passagedata pid="19" name="Successful Marriage" tags="" position="200,725" size="100,100">(set: $marriageSuccess to true)
 The marriage between Henry VII and Elizabeth of York solidified peace in England, uniting the houses of Lancaster and York. This brought much-needed stability to the nation.
 [[Continue-&gt;Henry VIII&#39;s Succession]]
-</tw-passagedata><tw-passagedata pid="20" name="Unsuccessful Marriage" tags="" position="550,650" size="100,100">(set: $marriageSuccess to false)
+</tw-passagedata><tw-passagedata pid="20" name="Unsuccessful Marriage" tags="" position="350,725" size="100,100">(set: $marriageSuccess to false)
 Henry VII’s marriage to Elizabeth of York was filled with tensions, leading to unrest among the nobles and citizens. The marriage failed to secure long-lasting peace.
 [[Continue-&gt;Henry VIII&#39;s Succession]]
-</tw-passagedata><tw-passagedata pid="21" name="Henry VIII&#39;s Succession" tags="" position="400,675" size="100,100"></tw-passagedata><tw-passagedata pid="22" name="Support for Reformation" tags="" position="400,875" size="100,100">(set: $supportReformation to true)
+</tw-passagedata><tw-passagedata pid="21" name="Henry VIII&#39;s Succession" tags="" position="200,850" size="100,100"></tw-passagedata><tw-passagedata pid="22" name="Support for Reformation" tags="" position="275,975" size="100,100">(set: $supportReformation to true)
 Henry VIII, backed by the support of nobles and clergy, successfully established the Church of England, separating from the Catholic Church and asserting his power.
 [[Continue-&gt;Dissolution of the Monasteries]]
-</tw-passagedata><tw-passagedata pid="23" name="Opposition to Reformation" tags="" position="550,875" size="100,100">(set: $supportReformation to false)
+</tw-passagedata><tw-passagedata pid="23" name="Opposition to Reformation" tags="" position="400,975" size="100,100">(set: $supportReformation to false)
 Henry VIII faced heavy opposition from the Catholic Church and nobles, delaying the formation of the Church of England. The Reformation would take longer than expected.
 [[Continue-&gt;Dissolution of the Monasteries]]
-</tw-passagedata><tw-passagedata pid="24" name="Monasteries Support Henry" tags="" position="275,775" size="100,100">(set: $supportMonasteries to true)
+</tw-passagedata><tw-passagedata pid="24" name="Monasteries Support Henry" tags="" position="200,1100" size="100,100">(set: $supportMonasteries to true)
 The monasteries, despite their historical power, supported Henry VIII&#39;s reforms. The wealth and power of the church remained intact for years to come.
 [[Continue-&gt;The Church of England]]
-</tw-passagedata><tw-passagedata pid="25" name="Monasteries Resist Henry" tags="" position="450,1025" size="100,100">(set: $supportMonasteries to false)
+</tw-passagedata><tw-passagedata pid="25" name="Monasteries Resist Henry" tags="" position="350,1100" size="100,100">(set: $supportMonasteries to false)
 Henry VIII dissolved the monasteries, transferring their wealth to the Crown and nobles. This redefined the socio-political landscape of England.
 [[Continue-&gt;The Church of England]]
-</tw-passagedata><tw-passagedata pid="26" name="The Church of England" tags="" position="300,1150" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="Armada Defeated" tags="" position="350,1325" size="100,100">(set: $armadaDefeated to true)
+</tw-passagedata><tw-passagedata pid="26" name="The Church of England" tags="" position="200,1225" size="100,100"></tw-passagedata><tw-passagedata pid="27" name="Armada Defeated" tags="" position="425,1600" size="100,100">(set: $armadaDefeated to true)
 The defeat of the Spanish Armada in 1588 secured England&#39;s naval dominance and marked the beginning of its rise as a global power.
 [[Continue-&gt;Elizabethan Golden Age]]
-</tw-passagedata><tw-passagedata pid="28" name="Armada Wins" tags="" position="775,1300" size="100,100">(set: $armadaDefeated to false)
+</tw-passagedata><tw-passagedata pid="28" name="Armada Wins" tags="" position="575,1600" size="100,100">(set: $armadaDefeated to false)
 The Spanish Armada dealt a serious blow to England’s forces, weakening its naval power. However, Elizabeth’s reign would continue to rebuild.
 [[Continue-&gt;Elizabethan Golden Age]]
-</tw-passagedata><tw-passagedata pid="29" name="Elizabethan Golden Age" tags="" position="500,1400" size="100,100"></tw-passagedata><tw-passagedata pid="30" name="Policies of Henry" tags="" position="275,400" size="100,100">(enchant:?page,(text-colour:black)+(bg:yellow)+(text-size:1.5))[//&#39;&#39;To establish his absolute rule, necessary changes were initiated by Henry VII, which aimed to concentrate all power in the monarchy. His monetary measures, for instance, the use of bonds and recognitions, augmented the cash flow to the king’s treasury (Jones, 2012). Further, he entered into diplomatic marriages with his children, which created alliances (Penn, 2012).
+</tw-passagedata><tw-passagedata pid="29" name="Elizabethan Golden Age" tags="" position="425,1725" size="100,100"></tw-passagedata><tw-passagedata pid="30" name="Policies of Henry" tags="" position="25,725" size="100,100">(enchant:?page,(text-colour:black)+(bg:yellow)+(text-size:1.5))[//&#39;&#39;To establish his absolute rule, necessary changes were initiated by Henry VII, which aimed to concentrate all power in the monarchy. His monetary measures, for instance, the use of bonds and recognitions, augmented the cash flow to the king’s treasury (Jones, 2012). Further, he entered into diplomatic marriages with his children, which created alliances (Penn, 2012).
 
 [[Henry VIII’s Succession-&gt;The Reformation under Henry VIII]]
-[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata></tw-storydata>
+[[Bibliography-&gt;Bibliography]]&#39;&#39;//]</tw-passagedata><tw-passagedata pid="31" name=" Victorious Path" tags="" position="212.5,1350" size="100,100"></tw-passagedata><tw-passagedata pid="32" name=" Defeated Path" tags="" position="337.5,1350" size="100,100"></tw-passagedata><tw-passagedata pid="33" name=" Support for Reformation" tags="" position="262.5,1475" size="100,100"></tw-passagedata><tw-passagedata pid="34" name=" Opposition to Reformation" tags="" position="387.5,1475" size="100,100"></tw-passagedata><tw-passagedata pid="35" name=" Successful Marriage" tags="" position="87.5,1600" size="100,100"></tw-passagedata><tw-passagedata pid="36" name=" Unsuccessful Marriage" tags="" position="212.5,1600" size="100,100"></tw-passagedata><tw-passagedata pid="37" name=" Armada Defeated" tags="" position="562.5,1725" size="100,100"></tw-passagedata><tw-passagedata pid="38" name=" Armada Wins" tags="" position="687.5,1725" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
